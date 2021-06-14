@@ -7,7 +7,7 @@ import math
 
 def solucion():
     # Completa la siguiente línea para generar un número entero aleatorio entre 15 y 25.
-    a =  # Sugerencia, usa random.randint
+    a = random.randint(15,25) # Sugerencia, usa random.randint
 
     """Creación del objeto vector con tamaño a"""
     v = vector(a)
@@ -19,7 +19,7 @@ def solucion():
     for i in range(1, a + 1):
         # Completa el llenado de cada casilla, el número debe ser entero y
         # aleatorio entre 1 y 99.
-        v.V[i] =  # Sugerencia, usa random.randint
+        v.V[i] = random.randint(1,99) # Sugerencia, usa random.randint
 
         """Como el número es aleatorio entre 1 y 9999, habrá UNA (1) nueva casilla
         ocupada, por lo tanto, se debe ir alterando en UNO (1) la posición 0 del vector
@@ -39,7 +39,7 @@ def solucion():
               recorremos range(1, 6, 6), que es la secuencia de números (1,2,3,4,5) con un valor de incremento 6, que resultará en la secuencia de número (1) solamente"""
     for i in range(1, a, 2):
         # Completa la siguiente línea para obtener el máximo común divisor de la posición actual y la posición siguiente.
-        valormcd =  # Sugerencia, usa math.gcd
+        valormcd = math.gcd(v.V[i], v.V[i+1]) # Sugerencia, usa math.gcd
 
         """Almacenamos y hallamos el mínimo común múltiplo de la posición actual y la posición siguiente del vector"""
         # Vamos a completar la función mcm, (vaya a la línea 80)
@@ -83,7 +83,7 @@ def mcm(x, y):
     # Sugerencia, la fórmula para obtener el mínimo común múltiplo consiste en
     # multiplicar los dos números y dividirlos por su máximo común divisor
     # Ejemplo: el mcm entre 8 y 12 es 24, teniendo en cuenta que 8x12=96 y su máximo común divisor es 4.
-    valor =  # Sugerencia, usa math.gcd
+    valor = x*y/math.gcd(x,y) # Sugerencia, usa math.gcd
     return valor
 
 
@@ -101,5 +101,5 @@ def imprimeVector(vector, mensaje="vector sin nombre: \t"):
 
 """Las siguientes líneas le permitirán probar su solución al presionar el botón de ejecutar"""
 a, b = solucion()
-imprimeVector(a, 'Original')
+#imprimeVector(a, 'Original')
 imprimeVector(b, 'Modificado')
